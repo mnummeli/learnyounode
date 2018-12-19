@@ -1,0 +1,78 @@
+{
+  "title": "OPI NODE.JSÄÄ!",
+  "common": {
+    "exercise": {
+      "pass": {
+        "sync": "Käytit synkronista metodia: {{{method}}}",
+        "async": "Käytit asynkronista metodia: {{{method}}}"
+      },
+      "fail": {
+        "sync": "Käytit synkronista metodia: {{{method}}}",
+        "async": "Käytit asynkronista metodia: {{{method}}}",
+        "unused": "Käytit asynkronista metodia `fs`-moduulista.",
+        "unexpected_error": "Odottamaton virhe HTTP-palvelimelta: {{{message}}}",
+        "connection": "Yhdistäminen osoitteeseen {{{address}}} epäonnistui: {{{message}}}"
+      }
+    }
+  },
+    "exercise": {
+    "HELLO WORLD": "HOI MAAILMA",
+    "BABY STEPS": "PIENIN ASKELIN",
+    "MY FIRST I/O!": "ENSIMMÄISET SYÖTTEET JA TULOSTEET!",
+    "MY FIRST ASYNC I/O!": "ENSIMMÄISET ASYNKRONISET SYÖTTEET JA TULOSTEET!",
+    "FILTERED LS": "SUODATETTU TIEDOSTOLISTAUS",
+    "MAKE IT MODULAR": "MODULARISOINTI",
+    "HTTP CLIENT": "HTTP-KYSELY",
+    "HTTP COLLECT": "HTTP-VASTAUSTEN LUKU",
+    "JUGGLING ASYNC": "ASYNKRONISTA TAITEILUA",
+    "TIME SERVER": "AIKAPALVELIN",
+    "HTTP FILE SERVER": "HTTP-TIEDOSTOPALVELIN",
+    "HTTP UPPERCASERER": "HTTP-MUUNNOS ISOIKSI KIRJAIMIKSI",
+    "HTTP JSON API SERVER": "HTTP-MUUNNOS JSONIKSI"
+  },
+  "exercises": {
+    "MAKE IT MODULAR": {
+      "fail": {
+        "missing_module": "Et käyttänyt apumoduulia, sinun tulee ladata moduuli require()-komennolla ratkaistaksesi tämän tehtävän",
+        "loadError": "Moduulitiedoston [{{path}}] lataaminen epäonnistui: {{{message}}}",
+        "mod": {
+          "_base": "Lisämoduulitiedostosi [{{path}}] {{{message}}}",
+          "no_export": "ei vie **yksittäistä funktiota**. Sinun tulee käyttää `module.exports = function() {}`-rakennetta.",
+          "arguments": "vie funktion, joka ottaa vähemmän kuin **kolme** parametria. Funktion tulee hyväksyä parametreikseen hakemisto, suodatin ja **kutsuttava funktio**.",
+          "missing_callback": "ei kutsunut parametrina annettua kutsuttavaa funktiota fs.readdir()in epäonnistuttua",
+          "missing_error": "ei näytä palauttavan virhettä `fs.readdir()`istä. Käytä suositeltua Node.js-ohjelmointitapaa `fs.readdir()`ille parametrina annetussa kutsuttavassa funktiossasi:\n\tif (err)\n\t  return callback(err)",
+          "callback_arguments": "ei kutsunut kutsuttavaa funktiota kahdella parametrilla, joista ensimmäisen piti olla `null` ja toisen lista tiedostonnimiä",
+          "dont_use_dot": "näyttää hyväksyvän '.'-alkuisen päätteen, toisessa komentoriviargumentissa ei pitäisi olla pistettä.",
+          "array_wrong_size": "ei kutsunut kutsuttavaa funktiota siten, että toinen parametri olisi ollut lista, jossa olisi ollut oikea määrä alkioita",
+          "dotExt": "näyttää hyväksyvän \"ext\":in \".ext\":in sijasta",
+          "array_comparison": "ei kutsunut kutsuttavaa funktiota siten, että toisena parametrina olisi ollut oikea tiedostolista",
+          "missing_array_argument": "ei kutsunut kutsuttavaa funktiota siten, että toisena parametrina olisi ollut lista",
+          "callback_error": "kutsui kutsuttavaa funktiota siten, että ensimmäinen parametri sisälsi virheilmoituksen:\n\t{{{error}}}",
+          "timeout": "ei kutsunut kutsuttavaa funktiota",
+          "unexpected": "palautti virheen:\n\t{{{error}}}"
+        }
+      },
+      "pass": {
+        "singleFunction": "Lisämoduuli tuo yksittäisen funktion",
+        "arguments": "Lisämoduuli tuo funktion, jota kutsutaan {{{count}}} parametrilla",
+        "error": "Lisämoduuli käsittelee virheet oikein",
+        "callback": "Lisämoduuli osaa kutsua parametrina annettua funktiota",
+        "callback_arguments": "Lisämoduuli kutsui parametrina annettua funktiota kahdella parametrilla",
+        "array_argument": "Lisämoduuli kutsui parametrina annettua funktiota siten, että toisena parametrina oli lista",
+        "dont_use_dot": "Lisämoduuli käsittelee oikein pisteellä alkavat tiedostopäätteet",
+        "array_size": "Lisämoduuli kutsui parametrina annettua funktiota siten, että toisena parametrina annetun listan pituus oli oikea",
+        "final": "Lisämoduuli kutsui parametrina annettua funktiota siten, että toisena parametrina annetun tiedostolistan pituus oli oikea"
+      }
+    },
+    "TIME SERVER": {
+      "fail": {
+        "connection": "Yhteyden otto porttiin {{port}} epäonnistui: {{{message}}}"
+      }
+    },
+    "HTTP FILE SERVER": {
+      "fail": {
+        "no_createReadStream": "Käytit fs-moduulin metodia {{{method}}} metodin fs.createReadStream() sijasta"
+      }
+    }
+  }
+}
